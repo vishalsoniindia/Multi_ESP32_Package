@@ -10,7 +10,7 @@
       },
       "platforms": [
         {
-          "name": "esp32",
+          "name": "multi_esp32_package",
           "architecture": "esp32",
           "version": "3.2.0",
           "category": "ESP32",
