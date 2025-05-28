@@ -6573,7 +6573,7 @@
           ]
         }
       ]
-    }
+    },
     {
       "name": "esp32_board_1",
       "maintainer": "Espressif Systems",
@@ -13147,7 +13147,7 @@
           ]
         }
       ]
-    }
+    },
     {
       "name": "esp32_board_2",
       "maintainer": "Espressif Systems",
@@ -19721,7 +19721,7 @@
           ]
         }
       ]
-    }
+    },
     {
       "name": "esp32_board_3",
       "maintainer": "Espressif Systems",
@@ -26295,7 +26295,7 @@
           ]
         }
       ]
-    }
+    },
     {
       "name": "esp32_board_4",
       "maintainer": "Espressif Systems",
@@ -32869,7 +32869,7 @@
           ]
         }
       ]
-    }
+    },
     {
       "name": "esp32_board_5",
       "maintainer": "Espressif Systems",
