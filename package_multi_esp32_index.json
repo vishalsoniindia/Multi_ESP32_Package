@@ -49,47 +49,47 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "esp32-arduino-libs",
               "version": "idf-release_v5.4-2f7dcd86-v1"
             },
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "esp-x32",
               "version": "2411"
             },
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "xtensa-esp-elf-gdb",
               "version": "14.2_20240403"
             },
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "esp-rv32",
               "version": "2411"
             },
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "riscv32-esp-elf-gdb",
               "version": "14.2_20240403"
             },
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "openocd-esp32",
               "version": "v0.12.0-esp32-20241016"
             },
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "esptool_py",
               "version": "4.9.dev3"
             },
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "mkspiffs",
               "version": "0.2.3"
             },
             {
-              "packager": "esp32",
+              "packager": "esp32_Board_0",
               "name": "mklittlefs",
               "version": "3.0.0-gnu12-dc7f933"
             },
@@ -39438,11 +39438,4 @@
               "checksum": "SHA-256:cff30841dad80ed5d7d2d58a31843b63afa57528979a9c839806568167691d8e",
               "host": "arm-linux-gnueabihf",
               "archiveFileName": "esptool-2.3.1-linux.tar.gz",
-              "size": "39563"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+             
