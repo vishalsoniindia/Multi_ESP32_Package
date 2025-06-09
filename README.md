@@ -16,11 +16,17 @@ This flexibility is especially useful for developers working on multiple project
 For Example, in my older project [DigiPClock](https://github.com/vishalsoniindia/digiPclock/tree/main), I used the function adc_power_off(); to reduce power consumption. This function is supported in ESP32 Board Package version 2.0.10, but it is no longer available or supported in version 3.2.0. As a result, users compiling the code with the latest ESP32 package encounter an error.
 Having multiple versions installed allows you (and others) to easily switch to the compatible 2.0.10 version when working on or compiling DigiPClock, avoiding the need to rewrite or modify legacy code just to make it compile on newer versions.
 
+___
+
 By the way, subscribe to my [YouTube](http://youtube.com/vishalsoniindia) channel for more projects like this. I also update my upcoming projects on [Instagram](https://www.instagram.com/vishalsoniindia/).
 buy me a coffee! ☕: [Donate](https://github.com/vishalsoniindia/BuyMeCoffee)
+___
 
 ## Steps to Install Multiple ESP32 Board Package Versions in the Arduino IDE
 The steps to install these board packages are similar to the standard ESP32 installation, but there are some differences—so please read carefully.
+
+![prefrances](https://github.com/user-attachments/assets/6700bfb0-9b34-4592-9c0c-238a12890702)
+![add link](https://github.com/user-attachments/assets/f6b36ee7-d37d-48fa-810f-abef275563ab)
 
 ### 1. Add link of Board
 Add the Multiple ESP32 Board Package URL to Arduino IDE Preferences
@@ -30,10 +36,14 @@ In the Additional Board Manager URLs field, add the following URL:
 https://raw.githubusercontent.com/vishalsoniindia/Multi_ESP32_Package/refs/heads/main/package_multi_esp32_index.json
 ```
 
+![esp32_boards](https://github.com/user-attachments/assets/0175c4c1-7c2c-4f66-8dc3-7a26237a8d8c)
+
 ### 2. Verify the ESP32 Board Package URL
 Go to **Tools > Board > Boards Manager** and search for ESP32.
 If you see ESP32 boards by Espressif Systems listed (as shown in the image), then everything is set up correctly.
 
+![esp32_01_install](https://github.com/user-attachments/assets/c23aaa0c-14a3-459b-9399-8c2550f77e95)
+![esp32__install](https://github.com/user-attachments/assets/a90859ff-720d-4367-bbbd-547a2b52bd75)
 
 ### 3. Install ESP32 Board Packages
 In the Board Manager, each entry like "**esp32_board_x**" represents a separate instance of the ESP32 board package that can be installed independently. The x in the name refers to the instance number. As of now, you can install up to 6 board instances, but this limit can be increased if needed.
@@ -42,6 +52,10 @@ To install multiple ESP32 versions, assign a different version to each board ins
 esp32_board_1  →  v3.1.1  
 esp32_board_2  →  v2.0.6  
 esp32_board_3  →  v2.0.10**
+
+![packages folder](https://github.com/user-attachments/assets/ff09b7ca-1cd4-4983-9d75-1a39b6fbc5c1)
+![platfrom file](https://github.com/user-attachments/assets/54deebaf-76d5-4977-97a9-6bf640405247)
+![name_cahange](https://github.com/user-attachments/assets/7602cb28-319f-4a6c-92c7-2ec1721b57c6)
 
 
 ### 4. Rename the Board Package
@@ -68,17 +82,18 @@ To rename the packages, follow these steps:
 4. Save the file.
 5. Repeat this process for each installed board package.
 
+![boards_ss](https://github.com/user-attachments/assets/7224c52b-a3c9-4971-8e66-051e6ba00555)
 
 ### 5. Verify Installed Versions
 Restart the Arduino IDE, then go to **Tools > Board**.
 You should now see all the ESP32 board entries listed with their version numbers, as renamed earlier.
 
+![blink esp32](https://github.com/user-attachments/assets/46faca7b-0a57-46b6-b460-f425f2741d78)
 
 ### 6. Test Each Package Version
 You can upload the Blink sketch to each installed ESP32 board package to verify that all versions work correctly.
 Alternatively, you can upload your specific code that is compatible with a particular version.
  Just make sure to select the correct board version from **Tools > Board** before uploading.
-
 
 ### 7. Updating ESP32 Board Packages
 If you want to install a new ESP32 package version in a specific board slot, you must first delete the existing one. Follow the steps below:
@@ -97,7 +112,9 @@ If you want to install a new ESP32 package version in a specific board slot, you
 4. Install the New Package
 5. Open the Arduino IDE, go to **Tools > Board > Boards Manager**, and install the desired version of the ESP32 board package. Install into the available slot you just cleared.
 
+___
 
 By the way, subscribe to my [YouTube](http://youtube.com/vishalsoniindia) channel for more projects like this. I also update my upcoming projects on [Instagram](https://www.instagram.com/vishalsoniindia/).
 buy me a coffee! ☕: [Donate](https://github.com/vishalsoniindia/BuyMeCoffee)
+___
 
