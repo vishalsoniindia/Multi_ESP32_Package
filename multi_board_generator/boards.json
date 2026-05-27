@@ -1,0 +1,10 @@
+{
+  "boards": [
+    "esp32_board_0",
+    "esp32_board_1",
+    "esp32_board_2",
+    "esp32_board_3",
+    "esp32_board_4",
+    "esp32_board_5"
+  ]
+}

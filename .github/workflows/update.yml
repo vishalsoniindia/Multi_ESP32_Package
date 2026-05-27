@@ -1,0 +1,40 @@
+name: Auto Update ESP32 Package
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 */12 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Generate package
+        run: |
+          cd multi_board_generator
+          python generate.py
+
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          git add package_multi_esp32_index.json
+
+          git diff --cached --quiet || git commit -m "Auto update ESP32 package"
+
+          git push
