@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "0 */12 * * *"
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -36,3 +39,21 @@ jobs:
           git diff --cached --quiet || git commit -m "Auto update ESP32 package"
 
           git push
+
+      - name: Keepalive (prevent 60-day workflow auto-disable)
+        run: |
+          # GitHub disables scheduled workflows after 60 days with no repository
+          # activity. If the package hasn't changed in a while there are no
+          # commits, so push an empty commit to reset that timer.
+          LAST=$(git log -1 --format=%ct)
+          NOW=$(date +%s)
+          AGE_DAYS=$(( (NOW - LAST) / 86400 ))
+          echo "Last commit was $AGE_DAYS day(s) ago."
+
+          if [ "$AGE_DAYS" -ge 45 ]; then
+            git commit --allow-empty -m "chore: keepalive to prevent scheduled workflow from being disabled"
+            git push
+            echo "Pushed keepalive commit."
+          else
+            echo "Recent activity present, no keepalive needed."
+          fi
